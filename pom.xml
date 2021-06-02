@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>guli_teacher</module>
+        <module>guli-common</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -62,6 +63,11 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.guli</groupId>
+                <artifactId>guli-common</artifactId>
+                <version>${guli.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
