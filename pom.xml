@@ -5,6 +5,9 @@
     <modules>
         <module>guli_edu</module>
         <module>guli-common</module>
+        <module>guli-commonservice-oss</module>
+        <module>guli-commonservice-oss</module>
+        <module>guli-commonservice-oss</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,6 +28,8 @@
         <mybatis-plus.version>3.0.5</mybatis-plus.version>
         <velocity.version>2.0</velocity.version>
         <swagger.version>2.7.0</swagger.version>
+<!--        <mysql.version>5.1.6</mysql.version>-->
+        <mysql.version>8.0.22</mysql.version>
     </properties>
 
     <dependencies>
@@ -69,16 +74,33 @@
                 <artifactId>guli-common</artifactId>
                 <version>${guli.version}</version>
             </dependency>
+            <!--mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <mainClass>com.guli.edu.EduApplication</mainClass>-->
+<!--                    <classifier>execute</classifier>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
 </project>

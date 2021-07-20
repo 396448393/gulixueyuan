@@ -25,4 +25,12 @@ public class GuliException extends RuntimeException {
         super(resultCodeEnum.getMessage());
         this.code=resultCodeEnum.getCode();
     }
+
+    @Override
+    public String toString(){
+        return "GuliException{"+
+                "message="+this.getMessage()+
+                ",code="+code+
+                "}";
+    }
 }
