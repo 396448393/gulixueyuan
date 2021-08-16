@@ -8,6 +8,7 @@
         <module>guli-commonservice-oss</module>
         <module>guli-commonservice-oss</module>
         <module>guli-commonservice-oss</module>
+        <module>excel-poi</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -30,6 +31,8 @@
         <swagger.version>2.7.0</swagger.version>
 <!--        <mysql.version>5.1.6</mysql.version>-->
         <mysql.version>8.0.22</mysql.version>
+        <poi.version>3.9</poi.version>
+        <commons-fileupload.version>1.3.1</commons-fileupload.version>
     </properties>
 
     <dependencies>
@@ -80,7 +83,26 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
+            <!--xls-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!--xlsx-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!--文件上传-->
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
 
 <!--    <build>-->
