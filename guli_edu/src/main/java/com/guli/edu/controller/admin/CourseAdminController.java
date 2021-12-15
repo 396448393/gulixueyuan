@@ -4,6 +4,7 @@ import com.guli.common.vo.R;
 import com.guli.edu.form.CourseInfoForm;
 import com.guli.edu.service.EduCourseService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.apache.commons.lang3.StringUtils;
@@ -39,5 +40,15 @@ public class CourseAdminController {
             @PathVariable String id){
         CourseInfoForm courseInfoForm = courseService.getCourseInfoFormById(id);
         return R.ok().data("item",courseInfoForm);
+    }
+    @ApiModelProperty(value = "更新课程")
+    @PutMapping("update-course-info/{id}")
+    public R updateCourseInfoById(
+            @ApiParam(name = "CourseInfoForm",value = "课程基本信息",required = true)
+            @RequestBody CourseInfoForm courseInfoForm,
+            @ApiParam(name = "id",value = "课程ID",required = true)
+            @PathVariable String id){
+        courseService.updateCourseInfoById(courseInfoForm);
+        return R.ok();
     }
 }
