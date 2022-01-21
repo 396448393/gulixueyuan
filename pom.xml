@@ -6,9 +6,9 @@
         <module>guli_edu</module>
         <module>guli-common</module>
         <module>guli-commonservice-oss</module>
-        <module>guli-commonservice-oss</module>
-        <module>guli-commonservice-oss</module>
-        <module>excel-poi</module>
+<!--        <module>guli-commonservice-oss</module>-->
+<!--        <module>guli-commonservice-oss</module>-->
+<!--        <module>excel-poi</module>-->
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
